@@ -11,7 +11,8 @@ class TestController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		return "made it here";
+		$beatles = ['John', 'Paul', 'George', 'Ringo'];
+		return view('test.index', compact('beatles'));
 	}
 
 	/**
