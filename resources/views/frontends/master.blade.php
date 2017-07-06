@@ -13,7 +13,7 @@
 <body>
 <div class="wrapper">
     <div class="main-panel">
-       @include('frontend.topnav')
+       @include('layouts.topnav')
         <div class="content">
             @yield('content')
         </div>

@@ -7,20 +7,15 @@
      @yield('title')
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-    @include('layouts.css')
+    @include('frontends.css')
     @yield('css')
 </head>
 <body>
 <div class="wrapper">
-    <div class="main-panel">
-       @include('frontend.topnav')
-        <div class="content">
-            @yield('content')
-        </div>
-        @include('layouts.footer')
-    </div>
+ @include('frontends.topnav')
+
 </div>
 </body>
-@include('layouts.scripts')
+@include('frontends.scripts')
 @yield('scripts')
 </html>
