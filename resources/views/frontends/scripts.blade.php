@@ -12,18 +12,18 @@
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
     <script src="js/light-bootstrap-dashboard.js"></script>
     <script type="text/javascript">
-        $(document).ready(function(){
+        // $(document).ready(function(){
 
-            //demo.initChartist();
+        //     //demo.initChartist();
 
-            $.notify({
-                icon: 'pe-7s-gift',
-                message: "Hi Welcome from My Sample Project."
+        //     $.notify({
+        //         icon: 'pe-7s-gift',
+        //         message: "Hi Welcome from My Sample Project."
 
-            },{
-                type: 'info',
-                timer: 4000
-            });
+        //     },{
+        //         type: 'info',
+        //         timer: 4000
+        //     });
 
-        });
+        // });
     </script>

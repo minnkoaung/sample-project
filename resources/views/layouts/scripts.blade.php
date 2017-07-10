@@ -18,7 +18,7 @@
 
             $.notify({
                 icon: 'pe-7s-gift',
-                message: "Hi Welcome from My Sample Project."
+                message: "Hi~ Welcome from My Sample Project Dashboard."
 
             },{
                 type: 'info',
