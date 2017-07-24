@@ -13,9 +13,12 @@
 <body>
 <div class="wrapper">
  @include('frontends.topnav')
-
+	<div class="container dump_container">
+	            @yield('content')
+	 </div>
 </div>
 </body>
 @include('frontends.scripts')
+@include('Alerts::show')
 @yield('scripts')
 </html>

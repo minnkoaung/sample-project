@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="main-panel">
+    <div class="container">
        @include('layouts.topnav')
         <div class="content">
             @yield('content')
