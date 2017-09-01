@@ -1,8 +1,9 @@
  <!--   Core JS Files   -->
     <!-- <script src="js/jquery-1.10.2.js" type="text/javascript"></script> -->
-    <script src="js/app.js" type="text/javascript"></script>
+    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    {{--  <script src="js/app.js" type="text/javascript"></script>  --}}
     <!--  Checkbox, Radio & Switch Plugins -->
-    <script src="js/bootstrap-checkbox-radio-switch.js"></script>
+    <script src="{{ asset('js/bootstrap-checkbox-radio-switch.js') }}"></script>
     <!--  Charts Plugin -->
     <!--   <script src="js/chartist.min.js"></script> -->
     <!--  Notifications Plugin    -->

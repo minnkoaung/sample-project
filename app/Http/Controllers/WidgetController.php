@@ -23,7 +23,7 @@ class WidgetController extends Controller
      */
     public function create()
     {
-        //
+        return view('widget.create');
     }
 
     /**

@@ -20,4 +20,6 @@ Route::get('test', 'TestController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//widget route
 Route::resource('widget', 'WidgetController');

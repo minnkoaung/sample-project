@@ -11,12 +11,22 @@
             </div>
 
             <ul class="nav">
-                <li class="active">
+                <li class="">
                     <a href="dashboard.html">
                         <i class="pe-7s-graph"></i>
                         <p>Dashboard</p>
                     </a>
                 </li>
+
+                <li class="">
+                    <a href="/widget/create">
+                        <i class="pe-7s-graph"></i>
+                        <p>Create Widget</p>
+                    </a>
+                </li>
+                
+
+               
                 <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>

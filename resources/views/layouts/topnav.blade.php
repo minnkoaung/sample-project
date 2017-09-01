@@ -10,7 +10,7 @@
                     <a class="navbar-brand" href="#">Dashboard</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-left">
+                    {{--  <ul class="nav navbar-nav navbar-left">
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
@@ -35,7 +35,7 @@
                                 <i class="fa fa-search"></i>
                             </a>
                         </li>
-                    </ul>
+                    </ul>  --}}
 
                     <ul class="nav navbar-nav navbar-right">
                         <li>
