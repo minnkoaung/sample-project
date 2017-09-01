@@ -26,5 +26,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 $factory->define(App\Widget::class, function ($faker) {
 	return [
 		'name' => $faker->unique()->word,
+		'slug' => $faker->unique()->word,
+		'user_id' => $faker->unique()->id,
 	];
 });

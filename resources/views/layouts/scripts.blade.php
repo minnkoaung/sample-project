@@ -7,12 +7,12 @@
     <!--  Charts Plugin -->
     <!--   <script src="js/chartist.min.js"></script> -->
     <!--  Notifications Plugin    -->
-    <script src="js/bootstrap-notify.js"></script>
+    <script src="{{ asset('js/bootstrap-notify.js') }}"></script>
     <!--  Google Maps Plugin    -->
     <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> -->
     <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-    <script src="js/light-bootstrap-dashboard.js"></script>
-    <script type="text/javascript">
+    <script src="{{ asset('js/light-bootstrap-dashboard.js') }}"></script>
+    {{--  <script type="text/javascript">
         $(document).ready(function(){
 
             //demo.initChartist();
@@ -27,4 +27,4 @@
             });
 
         });
-    </script>
+    </script>  --}}

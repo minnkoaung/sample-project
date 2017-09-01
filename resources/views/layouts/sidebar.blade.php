@@ -19,14 +19,11 @@
                 </li>
 
                 <li class="">
-                    <a href="/widget/create">
+                    <a href="/widget">
                         <i class="pe-7s-graph"></i>
-                        <p>Create Widget</p>
+                        <p>Widget</p>
                     </a>
-                </li>
-                
-
-               
+                </li>   
                 <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>

@@ -50,7 +50,7 @@ return [
 			'charset' => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix' => '',
-			'strict' => true,
+			'strict' => false, //value change for field doesn't have Default value error
 			'engine' => null,
 		],
 

@@ -1,6 +1,6 @@
 <footer class="footer">
             <div class="container-fluid">
-                <nav class="pull-left">
+                {{--  <nav class="pull-left">
                     <ul>
                         <li>
                             <a href="#">
@@ -23,7 +23,7 @@
                             </a>
                         </li>
                     </ul>
-                </nav>
+                </nav>  --}}
                 <p class="copyright pull-right">
                     &copy; 2017 <a href="#">Minn Ko Aung</a>, All rights reserved
                 </p>
