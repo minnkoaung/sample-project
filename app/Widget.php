@@ -1,9 +1,19 @@
 <?php
 
 namespace App;
+use App\Traits\HasModelTrait;
+class Widget extends SuperModel
+{
+	use HasModelTrait;
+    protected $fillable = ['name','slug','user_id'];
 
-use Illuminate\Database\Eloquent\Model;
+    /**
+     * Get the user that owns the widget.
+     */
+    public function user()
+    {
 
-class Widget extends Model {
-	protected $fillable = ['name','slug','user_id'];
+        return $this->belongsTo('App\User');
+    }
 }
+

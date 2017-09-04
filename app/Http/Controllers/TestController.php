@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Widget;
 
 class TestController extends Controller {
 	/**
@@ -11,10 +12,12 @@ class TestController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index() {
-		$beatles = ['John', 'Paul', 'George', 'Ringo'];
-		alert()->overlay('Listen', 'I hear beatle music!', 'success');
-		//alert()->error('Problem', 'Cannot hear');
-		return view('test.index', compact('beatles'));
+		// $beatles = ['John', 'Paul', 'George', 'Ringo'];
+		// alert()->overlay('Listen', 'I hear beatle music!', 'success');
+		// //alert()->error('Problem', 'Cannot hear');
+		// return view('test.index', compact('beatles'));
+		// $result = Widget::findOrFail(200);
+		throw new EmailNotProvidedException('facebook');
 	}
 
 	/**
