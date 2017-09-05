@@ -20,10 +20,18 @@
 
                 <li class="">
                     <a href="/widget">
-                        <i class="pe-7s-graph"></i>
+                        <i class="pe-7s-box2"></i>
                         <p>Widget</p>
                     </a>
+                </li> 
+
+                <li class="">
+                    <a href="/category">
+                        <i class="pe-7s-ticket"></i>
+                        <p>Category</p>
+                    </a>
                 </li>   
+
                 <li>
                     <a href="user.html">
                         <i class="pe-7s-user"></i>

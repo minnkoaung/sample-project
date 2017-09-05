@@ -1,6 +1,6 @@
 <?php
 
-use App\Widget;
+use App\Category;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder {
@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder {
 	 */
 	public function run() {
 		// $this->call(UsersTableSeeder::class);
-		Widget::unguard();
-		Widget::truncate();
-		factory(Widget::class, 30)->create();
-		Widget::reguard();
+		Category::unguard();
+		Category::truncate();
+		factory(Category::class, 30)->create();
+		Category::reguard();
 	}
 }

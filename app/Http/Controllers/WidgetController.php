@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\AuthTraits\OwnsRecord;
 use Illuminate\Http\Request;
 use App\Widget;
 use Redirect;
 use Illuminate\Support\Facades\Auth;
+use App\Exceptions\UnauthorizedException;
 
 class WidgetController extends Controller
 {
-
+  use OwnsRecord;
   public function __construct()
     {
       $this->middleware('auth', ['except' => ['index', 'show']] );
@@ -88,22 +90,18 @@ public function edit(Widget $widget)
      */
    public function update(Request $request, $id)
     {
-            $this->validate($request, [
-                'name' => 'required|string|max:40|unique:widgets,name,' .$id
+        $this->validate($request, [
+            'name' => 'required|string|max:30|unique:widgets,name,' .$id
 
-            ]);
-
-            $widget = Widget::findOrFail($id);
-
-            $slug = str_slug($request->name, "-");
-
-            $widget->update(['name' => $request->name,
-                                      'slug' => $slug,
-                                      'user_id' => Auth::id()]);
-
-            alert()->success('Congrats!', 'You updated a widget');
-
-            return Redirect::route('widget.show', ['widget' => $widget, 'slug' =>$slug]);
+        ]);
+        $widget = Widget::findOrFail($id);
+        if ($this->userNotOwnerOf($widget)){
+            throw new UnauthorizedException;
+        }
+        $slug = str_slug($request->name, "-");
+        $widget->update(['name' => $request->name,'slug' => $slug,'user_id' => Auth::id()]);
+        alert()->success('Congrats!', 'You updated a widget');
+        return Redirect::route('widget.show', ['widget' => $widget, 'slug' =>$slug]);
     }
 
 

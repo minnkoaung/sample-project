@@ -30,3 +30,8 @@ Route::get('widget/create', 'WidgetController@create')->name('widget.create');
 //Route with automatic route-model-binding
 Route::get('widget/{widget}-{slug?}','WidgetController@show')->name('widget.show'); 
 Route::resource('widget', 'WidgetController', ['except' => ['show', 'create']]);
+
+//Cateogry routes
+Route::get('category/create', 'CategoryController@create')->name('category.create');
+Route::get('category/{category}-{slug?}','CategoryController@show')->name('category.show'); 
+Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);

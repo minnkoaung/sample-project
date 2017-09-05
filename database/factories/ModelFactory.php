@@ -41,3 +41,12 @@ $factory->define(App\Widget::class, function ($faker) {
         'user_id' => $user_id,
     ];
 });
+
+// $factory->define(App\Category::class, function ($faker) {
+//     $name = $faker->unique()->word . ' ' . $faker->unique()->word;
+//     $slug = str_slug($name, "-");
+//     return [
+//         'name' => $name,
+//         'slug' => $slug,
+//     ];
+// });
