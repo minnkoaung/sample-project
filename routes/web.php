@@ -35,3 +35,6 @@ Route::resource('widget', 'WidgetController', ['except' => ['show', 'create']]);
 Route::get('category/create', 'CategoryController@create')->name('category.create');
 Route::get('category/{category}-{slug?}','CategoryController@show')->name('category.show'); 
 Route::resource('category', 'CategoryController', ['except' => ['show', 'create']]);
+
+//Admin routes
+Route::get('/admin', 'AdminController@index')->name('admin');

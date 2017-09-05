@@ -13,7 +13,8 @@ class WidgetController extends Controller
   use OwnsRecord;
   public function __construct()
     {
-      $this->middleware('auth', ['except' => ['index', 'show']] );
+      $this->middleware('auth', ['except' => 'index'] );
+      $this->middleware('admin', ['except' => ['index', 'show']] );
     }
   /**
 * Get the user that owns the widget.
@@ -77,10 +78,18 @@ class WidgetController extends Controller
    //      return view('widget.edit', compact('widget'));
    //  }
 
-public function edit(Widget $widget)
-{
-     return view('widget.edit', compact('widget'));
-}
+    public function edit($id)
+    {
+            $widget = Widget::findOrFail($id);
+
+            if ( ! $this->adminOrCurrentUserOwns($widget)){
+
+                throw new UnauthorizedException;
+
+            }
+
+            return view('widget.edit', compact('widget'));
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -95,8 +104,11 @@ public function edit(Widget $widget)
 
         ]);
         $widget = Widget::findOrFail($id);
-        if ($this->userNotOwnerOf($widget)){
-            throw new UnauthorizedException;
+        // if ($this->userNotOwnerOf($widget)){
+        //     throw new UnauthorizedException;
+        // }
+        if ( ! $this->adminOrCurrentUserOwns($widget)){
+          throw new UnauthorizedException;
         }
         $slug = str_slug($request->name, "-");
         $widget->update(['name' => $request->name,'slug' => $slug,'user_id' => Auth::id()]);

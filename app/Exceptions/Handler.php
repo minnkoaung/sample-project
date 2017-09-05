@@ -8,7 +8,7 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use App\Exceptions\EmailNotProvidedException;
 use App\Exceptions\UnauthorizedException;
-
+use App\Exceptions\NoActiveAccountException;
 
 
 class Handler extends ExceptionHandler
@@ -64,6 +64,15 @@ class Handler extends ExceptionHandler
 
             return response()->view('errors.email-not-provided-exception', compact('exception'), 500);
             break;
+
+           case $exception instanceof NoActiveAccountException:
+
+                if ($request->ajax()) {
+                    return response()->json(['error' => 'No Active Account'], 500);
+                }
+
+                return response()->view('errors.no-active-account-exception', compact('exception'), 500);
+                break;            
 
             case $exception instanceof UnauthorizedException:
 
