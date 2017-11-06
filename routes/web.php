@@ -21,6 +21,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+
+// socialite routes
+Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/{provider}/callback',
+'Auth\AuthController@handleProviderCallback');
+
 //widget route
 // Route::resource('widget', 'WidgetController');
 
@@ -38,3 +45,10 @@ Route::resource('category', 'CategoryController', ['except' => ['show', 'create'
 
 //Admin routes
 Route::get('/admin', 'AdminController@index')->name('admin');
+
+//termofservices
+Route::get('terms-of-service', 'PagesController@terms');
+//privacy
+Route::get('privacy', 'PagesController@privacy');
+
+
